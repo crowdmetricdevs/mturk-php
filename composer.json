@@ -1,4 +1,3 @@
-
 {
     "name": "cmdev/mturk-php",
     "description": "Provides a simple library to communicate with the Amazon Mechanical Turk API. This is a fork of ctrlcctrlv/mturk-php",
@@ -17,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Cmdev\\Mturk-php\\": "src/"
+            "Cmdev\\Mturkphp\\": "src/"
         }
     },
     "minimum-stability": "dev"
