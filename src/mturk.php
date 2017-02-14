@@ -84,18 +84,18 @@ class MechanicalTurk {
         $xml = curl_exec($ch);
         $info = curl_getinfo($ch); 
         if(curl_errno($ch)) {
-            throw new Exception('Curl returned an error: ' . curl_error($ch));
+            throw new \Exception('Curl returned an error: ' . curl_error($ch));
         }
 
-        $simplexml = new SimpleXMLElement($xml);
+        $simplexml = new \SimpleXMLElement($xml);
 
         return json_decode(json_encode((array)$simplexml, true));
     }
 
     // From http://stackoverflow.com/a/3975706/1901658
     public static function get_response_element($array, $needle) {
-        $iterator = new RecursiveArrayIterator($array);
-        $recursive = new RecursiveIteratorIterator($iterator, RecursiveIteratorIterator::SELF_FIRST);
+        $iterator = new \RecursiveArrayIterator($array);
+        $recursive = new \RecursiveIteratorIterator($iterator, \RecursiveIteratorIterator::SELF_FIRST);
         foreach ($recursive as $key => $value) {
             if ($key === $needle) {
                 return $value;
@@ -104,6 +104,6 @@ class MechanicalTurk {
     }
 
     public static function is_valid($request) {
-        return MechanicalTurk::get_response_element($request, 'IsValid') === 'True';
+        return self::get_response_element($request, 'IsValid') === 'True';
     }
 }
