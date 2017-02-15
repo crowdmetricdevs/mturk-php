@@ -9,14 +9,28 @@ mturk.php is written in the spirit of my original mTurk library, [mturk.py](http
 
 Read the official mTurk API docs [here](http://docs.aws.amazon.com/AWSMechTurk/latest/AWSMturkAPI/Welcome.html).
 
-**Example configuration file (mturkconfig.json)**
-```json
-{
-"use_sandbox" : false,
-"verify_mturk_ssl" : true,
-"aws_key" : "ACCESSID",
-"aws_secret_key" : "PASSWORD"
-}
+https://github.com/crowdmetricdevs/mturk-php/edit/master/README.md
+
+## Installation
+
+Install by adding laraturk to your composer.json file:
+
+    require : {
+        "cmdev/mturk-php": "dev-master"
+    }
+    
+or with a composer command:
+
+    composer require "cmdev/mturk-php": "dev-master"
+
+**Example configuration file (mturk.php)**
+```php
+$config = [
+    "use_sandbox" => false,
+    "verify_mturk_ssl" => true,
+    "aws_key" => "ACCESSID",
+    "aws_secret_key" => "PASSWORD"
+];
 ```
 **Getting your balance**
 ```php
