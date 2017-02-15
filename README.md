@@ -13,7 +13,7 @@ https://github.com/crowdmetricdevs/mturk-php/edit/master/README.md
 
 ## Installation
 
-Install by adding laraturk to your composer.json file:
+Install by adding mturk-php to your composer.json file:
 
     require : {
         "cmdev/mturk-php": "dev-master"
